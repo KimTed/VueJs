@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>데이터 바인딩 복습</title>
+	<script src="https://unpkg.com/vue" type="text/javascript"></script>
+</head>
+<body>
+	<!-- 상위에서 하위로~(data - "props") -->
+	<div id="wrap1">
+		<child-component1 v-bind:parent="message"></child-component1>
+		<sibling-component1 v-bind:parent1="messageToSibling"></sibling-component1>
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<!-- 하위에서 상위로~(event) -->
+	<div id="wrap2">
+		<parent-component2></parent-component2>
+	</div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<!-- 이벤트 버스 사용 -->
+	<div id="wrap3">
+		<child-component3></child-component3>
+			<br>
+		<sibling-component3></sibling-component3>
+	</div>
+	<script src="reviewJs.js" type="text/javascript"></script>
+</body>
+</html>
